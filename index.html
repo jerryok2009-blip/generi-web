@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>GENERI - 레거시 데이터, AI로 새로운 숨결을 불어넣다</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <style>
+    body {
+      background-color: #f0ece3;
+      background-image: linear-gradient(rgba(15,33,66,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(15,33,66,0.07) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .blueprint-dark-bg {
+      background-color: #0f2142;
+      background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    html { scroll-behavior: smooth; }
+    /* 모바일 가로 스크롤 방지용 강제 설정 */
+    .overflow-x-hidden-safe { overflow-x: hidden; width: 100%; position: relative; }
+  </style>
+</head>
+<body class="min-h-screen text-[#0f2142] font-sans relative overflow-x-hidden-safe">
+
+  <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 h-[68px] bg-[#0f2142]/95 backdrop-blur-md border-b border-white/10">
+    <a href="#" class="flex items-center gap-2 text-white font-bold text-xl tracking-wider font-serif">GENERI</a>
+    
+    <ul class="hidden md:flex items-center gap-8 text-white/70 font-medium text-sm">
+      <li><a href="#problem" class="hover:text-white transition">문제</a></li>
+      <li><a href="#how" class="hover:text-white transition">원리</a></li>
+      <li><a href="#compare" class="hover:text-white transition">비교</a></li>
+      <li><a href="#bridge" class="hover:text-white transition">브릿지</a></li>
+      <li><a href="#camp" class="hover:text-white transition">캠프</a></li>
+      <li><a href="#consulting" class="hover:text-white transition">컨설팅</a></li>
+      <li><a href="#about" class="hover:text-white transition">회사소개</a></li>
+      <li><a href="#contact" class="bg-[#b85c38] text-white px-5 py-2 rounded-sm hover:bg-[#d4724a] transition font-bold">무료 진단</a></li>
+    </ul>
+
+    <button id="menu-btn" class="md:hidden text-white">
+      <i data-lucide="menu" class="w-7 h-7"></i>
+    </button>
+  </nav>
+
+  <div id="mobile-menu" class="hidden fixed top-[68px] left-0 right-0 bg-[#0f2142] p-6 flex flex-col gap-4 z-40 border-b border-white/10 md:hidden">
+    <a href="#problem" class="mobile-link text-white/80 py-2 border-b border-white/10">문제 인식</a>
+    <a href="#how" class="mobile-link text-white/80 py-2 border-b border-white/10">작동 원리</a>
+    <a href="#compare" class="mobile-link text-white/80 py-2 border-b border-white/10">AI 도입 비교</a>
+    <a href="#bridge" class="mobile-link text-white/80 py-2 border-b border-white/10">제너리 브릿지</a>
+    <a href="#camp" class="mobile-link text-white/80 py-2 border-b border-white/10">제너리 캠프</a>
+    <a href="#consulting" class="mobile-link text-white/80 py-2 border-b border-white/10">DX 컨설팅</a>
+    <a href="#about" class="mobile-link text-white/80 py-2 border-b border-white/10">회사소개</a>
+    <a href="#contact" class="mobile-link text-[#b85c38] font-bold py-2 mt-2">무료 진단 신청 →</a>
+  </div>
+
+  <section class="relative min-h-screen flex items-center pt-24 pb-20 px-6 md:px-12 blueprint-dark-bg overflow-hidden">
+    <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+      <div class="transform transition duration-800 translate-y-0 opacity-100">
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-black text-[#f0ece3] leading-[1.2] mb-6 font-serif tracking-tight">
+          레거시 데이터,<br />
+          <span class="text-[#22a09d]">AI로 새로운 숨결을 불어넣다.</span>
+        </h1>
+        <p class="text-[#f0ece3]/70 text-base md:text-lg mb-10 max-w-lg leading-relaxed font-light">
+          수억 원이 드는 시스템 전면 교체? 이제 필요 없습니다.<br />
+          기존 전산망을 <strong class="text-white font-medium">가장 안전하게 AI와 연결</strong>하는<br />
+          국내 최고의 DX 파트너, <strong class="text-white font-medium">제너리(Generi)</strong>입니다.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#contact" class="inline-flex justify-center items-center bg-[#b85c38] text-white font-bold px-8 py-4 rounded-sm hover:bg-[#d4724a] transition transform hover:-translate-y-1 shadow-lg shadow-[#b85c38]/20 tracking-wide text-sm text-center">무료 AI 진단 신청 →</a>
+          <a href="#how" class="inline-flex justify-center items-center bg-transparent text-[#f0ece3]/70 border border-[#f0ece3]/20 font-bold px-8 py-4 rounded-sm hover:text-white hover:border-[#f0ece3]/50 transition tracking-wide text-sm text-center">작동 원리 보기</a>
+        </div>
+      </div>
+
+      <div class="flex justify-center w-full">
+        <div class="border border-white/10 bg-white/5 p-6 md:p-10 rounded-sm relative w-full max-w-[460px]">
+          <div class="absolute top-[-1px] left-[-1px] w-3.5 h-3.5 border-t-2 border-l-2 border-[#b85c38]"></div>
+          <div class="absolute bottom-[-1px] right-[-1px] w-3.5 h-3.5 border-b-2 border-r-2 border-[#b85c38]"></div>
+          <div class="text-[#b85c38] font-mono text-[0.65rem] mb-6 flex items-center gap-2 border-b border-[#b85c38]/30 pb-2 tracking-[0.15em]">
+            GENERI-BRIDGE // DATA FLOW INTERFACE
+          </div>
+          <div class="flex flex-col sm:grid sm:grid-cols-[1fr_auto_1fr] items-center gap-4 mb-5">
+            <div class="w-full bg-white/5 border border-white/10 p-4 text-center">
+              <div class="font-mono text-[0.6rem] text-white/50 tracking-widest mb-1">SOURCE</div>
+              <div class="font-bold text-white text-sm">Legacy DB</div>
+              <div class="font-mono text-[0.6rem] text-white/40 mt-1 uppercase">ERP/MES/SQL</div>
+            </div>
+            <div class="text-[#b85c38] rotate-90 sm:rotate-0"><i data-lucide="arrow-right" class="w-5 h-5"></i></div>
+            <div class="w-full bg-[#1a7a78]/20 border border-[#1a7a78]/40 p-4 text-center">
+              <div class="font-mono text-[0.6rem] text-white/50 tracking-widest mb-1">BRIDGE</div>
+              <div class="font-bold text-[#22a09d] text-sm">AI Agent</div>
+              <div class="font-mono text-[0.6rem] text-[#1a7a78] mt-1 uppercase">Secure RAG</div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-4">
+            <div class="bg-[#b85c38]/10 border border-[#b85c38]/20 p-2 text-center rounded-sm">
+              <div class="font-mono text-[0.55rem] text-[#d4724a] tracking-wider uppercase">SECURE GATEWAY</div>
+              <div class="text-[0.7rem] text-white/70 mt-1">방화벽 내부</div>
+            </div>
+            <div class="bg-[#1a7a78]/10 border border-[#1a7a78]/20 p-2 text-center rounded-sm">
+              <div class="font-mono text-[0.55rem] text-[#22a09d] tracking-wider uppercase">ZERO LEAKAGE</div>
+              <div class="text-[0.7rem] text-white/70 mt-1">데이터 보안</div>
+            </div>
+            <div class="bg-white/5 border border-white/10 p-2 text-center rounded-sm">
+              <div class="font-mono text-[0.55rem] text-white/50 tracking-wider uppercase">LOW LATENCY</div>
+              <div class="text-[0.7rem] text-white/70 mt-1">즉시 응답</div>
+            </div>
+          </div>
+          <div class="font-mono text-[0.65rem] text-white/40 text-center mt-6 pt-3 border-t border-white/10 tracking-wider">
+            // 기존 시스템 100% 유지 · ERP/MES 즉시 연동 가능
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="problem" class="py-24 px-6 md:px-12 max-w-7xl mx-auto relative z-10 bg-[#f0ece3]">
+    <h2 class="text-3xl md:text-4xl lg:text-[2.8rem] font-black text-[#0f2142] font-serif leading-[1.25] mb-12">
+      완벽한 AI 도입을 가로막는<br />
+      <span class="text-[#b85c38]">현실의 딜레마</span>
+    </h2>
+    
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+      <div class="flex flex-col gap-3">
+        <div class="flex items-start gap-4 bg-white p-4 border border-[#0f2142]/10 border-l-[3px] border-l-[#c0392b] shadow-sm">
+          <span class="shrink-0 w-[22px] h-[22px] bg-[#c0392b] text-white flex items-center justify-center text-[0.65rem] font-mono mt-0.5">01</span>
+          <span class="text-sm md:text-[0.88rem] leading-[1.65] text-[#0f2142]">아침마다 어제 실적 엑셀로 취합하느라 1시간 이상 걸린다.</span>
+        </div>
+        <div class="flex items-start gap-4 bg-white p-4 border border-[#0f2142]/10 border-l-[3px] border-l-[#c0392b] shadow-sm">
+          <span class="shrink-0 w-[22px] h-[22px] bg-[#c0392b] text-white flex items-center justify-center text-[0.65rem] font-mono mt-0.5">02</span>
+          <span class="text-sm md:text-[0.88rem] leading-[1.65] text-[#0f2142]">우리 회사 ERP/MES는 도입한 지 10년이 넘어서 AI 연동이 막막하다.</span>
+        </div>
+        <div class="flex items-start gap-4 bg-white p-4 border border-[#0f2142]/10 border-l-[3px] border-l-[#c0392b] shadow-sm">
+          <span class="shrink-0 w-[22px] h-[22px] bg-[#c0392b] text-white flex items-center justify-center text-[0.65rem] font-mono mt-0.5">03</span>
+          <span class="text-sm md:text-[0.88rem] leading-[1.65] text-[#0f2142]">전면 교체(Rip & Replace)는 천문학적 비용과 수년이 소요된다.</span>
+        </div>
+        <div class="flex items-start gap-4 bg-white p-4 border border-[#0f2142]/10 border-l-[3px] border-l-[#c0392b] shadow-sm">
+          <span class="shrink-0 w-[22px] h-[22px] bg-[#c0392b] text-white flex items-center justify-center text-[0.65rem] font-mono mt-0.5">04</span>
+          <span class="text-sm md:text-[0.88rem] leading-[1.65] text-[#0f2142]">챗GPT 같은 공개 AI는 기업 핵심 데이터 유출 위험이 있어 쓰지 못한다.</span>
+        </div>
+      </div>
+
+      <div class="bg-[#0f2142] p-8 md:p-10 border border-white/10 rounded-sm relative overflow-hidden">
+        <h3 class="text-[1.2rem] md:text-[1.25rem] font-serif font-bold text-[#f0ece3] leading-[1.4] mb-4">
+          기존의 시스템을 버리지 않고,<br class="hidden md:block" />가장 안전하게 AI와 연결할 '교량(Bridge)'이 필요합니다.
+        </h3>
+        <p class="text-[#f0ece3]/60 text-[0.85rem] md:text-[0.88rem] leading-[1.9] font-light mb-6">
+          시스템 전면 교체 없이 기존 데이터를 활용하여, <strong class="text-[#d4724a] font-semibold">최소한의 투자로 최대의 AI 성과</strong>를 만들어 드립니다.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="inline-flex items-center gap-1.5 bg-[#1a7a78]/15 border border-[#1a7a78]/30 text-[#22a09d] text-[0.7rem] px-3 py-1.5 font-mono uppercase">✦ 시스템 교체 불필요</span>
+          <span class="inline-flex items-center gap-1.5 bg-[#1a7a78]/15 border border-[#1a7a78]/30 text-[#22a09d] text-[0.7rem] px-3 py-1.5 font-mono uppercase">✦ 보안 100% 사내 처리</span>
+          <span class="inline-flex items-center gap-1.5 bg-[#1a7a78]/15 border border-[#1a7a78]/30 text-[#22a09d] text-[0.7rem] px-3 py-1.5 font-mono uppercase">✦ 즉시 도입 가능</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-6 md:px-12 bg-[#e8e3d8] relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <p class="font-mono text-sm tracking-[0.2em] text-[#b85c38] uppercase flex items-center gap-2 mb-4 font-semibold">
+        진정한 디지털 전환(DX)을 완성하는
+      </p>
+      <h2 class="text-3xl md:text-4xl lg:text-[2.8rem] font-black text-[#0f2142] font-serif leading-[1.25] mb-4">
+        제너리의 <span class="text-[#1a7a78]">3대 서비스</span>
+      </h2>
+      <p class="text-[0.9rem] md:text-[0.95rem] text-[#6b7a8d] max-w-[580px] leading-[1.95] font-light mb-12">
+        레거시를 훼손하지 않으면서 가장 빠르고 안전하게 미래와 융합하는 제너리만의 DX 생태계.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-[1px] md:bg-[#0f2142]/10 md:border md:border-[#0f2142]/10">
+        <div class="bg-white p-8 md:p-10 relative overflow-hidden transition-colors hover:bg-[#e8e3d8]">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-[#1a7a78]"></div>
+          <div class="font-mono text-base font-bold tracking-[0.2em] text-[#6b7a8d] mb-4 uppercase">SOLUTION 01</div>
+          <i data-lucide="database" class="text-[#1a7a78] w-9 h-9 mb-4"></i>
+          <h4 class="font-serif text-[1.1rem] md:text-[1.15rem] font-black text-[#0f2142] mb-1">제너리 브릿지</h4>
+          <div class="font-mono text-[0.7rem] text-[#6b7a8d] tracking-[0.08em] uppercase mb-4">Generi-Bridge</div>
+          <p class="text-[0.8rem] md:text-[0.82rem] text-[#6b7a8d] leading-[1.8] font-light">레거시 DB와 AI 에이전트의 안전한 연결. 기존 ERP/MES 위에 AI를 바로 얹습니다.</p>
+        </div>
+        <div class="bg-white p-8 md:p-10 relative overflow-hidden transition-colors hover:bg-[#e8e3d8]">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-[#b85c38]"></div>
+          <div class="font-mono text-base font-bold tracking-[0.2em] text-[#6b7a8d] mb-4 uppercase">SOLUTION 02</div>
+          <i data-lucide="message-square" class="text-[#b85c38] w-9 h-9 mb-4"></i>
+          <h4 class="font-serif text-[1.1rem] md:text-[1.15rem] font-black text-[#0f2142] mb-1">제너리 캠프</h4>
+          <div class="font-mono text-[0.7rem] text-[#6b7a8d] tracking-[0.08em] uppercase mb-4">Generi-Camp</div>
+          <p class="text-[0.8rem] md:text-[0.82rem] text-[#6b7a8d] leading-[1.8] font-light">2026 지방선거 특화 AI 캠프. 가장 기민하게 민심과 연결되는 선거 AI 솔루션.</p>
+        </div>
+        <div class="bg-white p-8 md:p-10 relative overflow-hidden transition-colors hover:bg-[#e8e3d8]">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-[#1e3a6a]"></div>
+          <div class="font-mono text-base font-bold tracking-[0.2em] text-[#6b7a8d] mb-4 uppercase">SOLUTION 03</div>
+          <i data-lucide="pen-tool" class="text-[#1e3a6a] w-9 h-9 mb-4"></i>
+          <h4 class="font-serif text-[1.1rem] md:text-[1.15rem] font-black text-[#0f2142] mb-1">DX 컨설팅</h4>
+          <div class="font-mono text-[0.7rem] text-[#6b7a8d] tracking-[0.08em] uppercase mb-4 uppercase">DX Consulting</div>
+          <p class="text-[0.8rem] md:text-[0.82rem] text-[#6b7a8d] leading-[1.8] font-light">기술의 도입을 넘어, 스스로 진화하는 조직을 만들다. 하이브리드 인재 양성의 교량.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="py-24 px-6 md:px-12 bg-[#162d55] relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <p class="font-mono text-sm tracking-[0.2em] text-[#d4724a] uppercase flex items-center gap-2 mb-4 font-semibold uppercase">
+        완벽한 보안 · 압도적인 직관성
+      </p>
+      <h2 class="text-3xl md:text-4xl lg:text-[2.8rem] font-black text-[#f0ece3] font-serif leading-[1.25] mb-4">
+        데이터는 방화벽을 절대 넘지 않으며,<br />
+        <span class="text-[#22a09d]">실무자는 코딩을 배울 필요가 없습니다.</span>
+      </h2>
+      <p class="text-[0.9rem] md:text-[0.95rem] text-[#f0ece3]/55 max-w-[580px] leading-[1.95] font-light mb-12">
+        말로 물으면 AI가 사내 DB를 직접 읽어 즉시 리포트로 답변합니다.
+      </p>
+
+      <div class="flex flex-col md:grid md:grid-cols-[1fr_auto_1fr_auto_1fr] border border-white/10 items-stretch overflow-hidden">
+        <div class="p-8 bg-white/5 hover:bg-white/10 transition-colors border-b md:border-b-0 md:border-r border-white/10">
+          <div class="font-mono text-[0.62rem] tracking-[0.2em] text-[#d4724a] mb-3 uppercase">INPUT // 01</div>
+          <i data-lucide="message-circle" class="text-[#f0ece3] w-8 h-8 mb-3"></i>
+          <h4 class="font-serif text-base font-bold text-[#f0ece3] mb-2">자연어 질문</h4>
+          <p class="text-[0.8rem] md:text-[0.83rem] text-[#f0ece3]/55 leading-[1.8] font-light mb-4">SQL 몰라도 됩니다. 평소 말하듯 질문합니다.</p>
+          <div class="p-3 bg-black/25 border-l-2 border-[#1a7a78] font-mono text-[0.7rem] md:text-[0.72rem] text-[#1aa09d] leading-[1.7]">"오늘 A라인 불량률 원인 분석해줘"</div>
+        </div>
+        <div class="flex items-center justify-center p-4 md:px-3 text-[#b85c38] bg-[#b85c38]/10 rotate-90 md:rotate-0">
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </div>
+        <div class="p-8 bg-white/5 hover:bg-white/10 transition-colors border-y md:border-y-0 md:border-x border-white/10">
+          <div class="font-mono text-[0.62rem] tracking-[0.2em] text-[#d4724a] mb-3 uppercase">BRIDGE // 02</div>
+          <i data-lucide="server" class="text-[#f0ece3] w-8 h-8 mb-3"></i>
+          <h4 class="font-serif text-base font-bold text-[#f0ece3] mb-2">Generi-Bridge AI Agent</h4>
+          <p class="text-[0.8rem] md:text-[0.83rem] text-[#f0ece3]/55 leading-[1.8] font-light mb-4">Corporate Secure Firewall 내부에서만 처리. 데이터 외부 전송 zero.</p>
+          <div class="p-3 bg-black/25 border-l-2 border-[#1a7a78] font-mono text-[0.7rem] md:text-[0.72rem] text-[#1aa09d] leading-[1.7]">SELECT * FROM production<br/>WHERE line='A' AND date=today</div>
+        </div>
+        <div class="flex items-center justify-center p-4 md:px-3 text-[#b85c38] bg-[#b85c38]/10 rotate-90 md:rotate-0">
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </div>
+        <div class="p-8 bg-white/5 hover:bg-white/10 transition-colors border-t md:border-t-0 md:border-l border-white/10">
+          <div class="font-mono text-[0.62rem] tracking-[0.2em] text-[#d4724a] mb-3 uppercase">OUTPUT // 03</div>
+          <i data-lucide="file-text" class="text-[#f0ece3] w-8 h-8 mb-3"></i>
+          <h4 class="font-serif text-base font-bold text-[#f0ece3] mb-2">Analyzed Report & Insights</h4>
+          <p class="text-[0.8rem] md:text-[0.83rem] text-[#f0ece3]/55 leading-[1.8] font-light mb-4">결과를 자연어 리포트로 즉시 전달. 코딩 지식 불필요.</p>
+          <div class="p-3 bg-black/25 border-l-2 border-[#1a7a78] font-mono text-[0.7rem] md:text-[0.72rem] text-[#1aa09d] leading-[1.7]">"원자재 입고 이후 B라인에서 불량이 급증했습니다."</div>
+        </div>
+      </div>
+
+      <div class="mt-8 p-6 bg-[#1a7a78]/10 border border-[#1a7a78]/25 border-l-[3px] border-l-[#22a09d] flex gap-4 items-start">
+        <i data-lucide="lock" class="shrink-0 text-[#22a09d] mt-1 w-6 h-6"></i>
+        <div>
+          <h5 class="font-bold text-[0.9rem] text-[#f0ece3] mb-2 uppercase">완벽한 보안 — AI가 데이터를 훔쳐가지 않습니다</h5>
+          <p class="text-[0.8rem] md:text-[0.82rem] text-[#f0ece3]/60 leading-[1.8]">제너리 브릿지는 귀사가 현재 사용 중인 모든 레거시 시스템(기존 ERP/MES) 및 사내 DB 위에서 작동하는 '조회 에이전트'입니다. AI는 필요한 데이터만 순간적으로 조회하며, 원본 데이터베이스를 외부로 유출하지 않습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="compare" class="py-24 px-6 md:px-12 bg-[#f0ece3] relative z-10">
+    <div class="max-w-7xl mx-auto overflow-hidden">
+      <h2 class="text-3xl md:text-4xl lg:text-[2.8rem] font-black text-[#0f2142] font-serif leading-[1.25] mb-4">
+        왜 <span class="text-[#1a7a78]">제너리 솔루션</span>인가?
+      </h2>
+      <p class="text-[0.9rem] md:text-[0.95rem] text-[#6b7a8d] max-w-[580px] leading-[1.95] font-light mb-12">
+        세 가지 AI 도입 방식을 객관적으로 비교했습니다. 답은 명확합니다.
+      </p>
+
+      <div class="overflow-x-auto -mx-6 px-6">
+        <div class="min-w-[700px]">
+          <table class="w-full text-left border-collapse border border-[#0f2142]/10 bg-white">
+            <thead>
+              <tr class="border-b-2 border-[#0f2142]/10 bg-[#f0ece3]/50">
+                <th class="p-4 md:p-5 font-mono text-[0.78rem] text-[#6b7a8d] uppercase w-1/4">비교 항목</th>
+                <th class="p-4 md:p-5 font-mono text-[0.78rem] text-[#6b7a8d] uppercase w-1/4">전면 교체</th>
+                <th class="p-4 md:p-5 font-mono text-[0.78rem] text-[#6b7a8d] uppercase w-1/4">외부 퍼블릭 AI</th>
+                <th class="p-4 md:p-5 font-mono text-[0.78rem] text-white uppercase bg-[#0f2142] text-center w-1/4">Generi-Bridge</th>
+              </tr>
+            </thead>
+            <tbody class="text-[0.8rem] md:text-[0.85rem]">
+              <tr class="border-b border-[#0f2142]/10">
+                <td class="p-4 md:p-5 font-mono font-bold text-[#0f2142] border-r border-[#0f2142]/10">시스템 호환성</td>
+                <td class="p-4 md:p-5 text-[#6b7a8d]"><i data-lucide="x-circle" class="inline text-[#c0392b] mr-1 w-4 h-4"></i>기존 시스템 폐기 및 재구축</td>
+                <td class="p-4 md:p-5 text-[#6b7a8d]"><i data-lucide="x-circle" class="inline text-[#c0392b] mr-1 w-4 h-4"></i>제한적인 API 연동</td>
+                <td class="p-4 md:p-5 bg-[#0f2142] text-[#f0ece3] text-center font-semibold"><i data-lucide="check" class="inline text-[#22a09d] mr-1 w-4 h-4"></i>기존 ERP/MES 100%<br/>유지 및 즉시 연동</td>
+              </tr>
+              <tr class="border-b border-[#0f2142]/10">
+                <td class="p-4 md:p-5 font-mono font-bold text-[#0f2142] border-r border-[#0f2142]/10">보안성</td>
+                <td class="p-4 md:p-5 text-[#6b7a8d]"><i data-lucide="x-circle" class="inline text-[#c0392b] mr-1 w-4 h-4"></i>마이그레이션 리스크 존재</td>
+                <td class="p-4 md:p-5 text-[#6b7a8d]"><i data-lucide="x-circle" class="inline text-[#c0392b] mr-1 w-4 h-4"></i>데이터 외부 전송 필수</td>
+                <td class="p-4 md:p-5 bg-[#0f2142] text-[#f0ece3] text-center font-semibold"><i data-lucide="check" class="inline text-[#22a09d] mr-1 w-4 h-4"></i>최상<br/>(사내 폐쇄망 기반)</td>
+              </tr>
+              <tr class="border-b border-[#0f2142]/10">
+                <td class="p-4 md:p-5 font-mono font-bold text-[#0f2142] border-r border-[#0f2142]/10">사용성</td>
+                <td class="p-4 md:p-5 text-[#6b7a8d]"><i data-lucide="x-circle" class="inline text-[#c0392b] mr-1 w-4 h-4"></i>복잡한 쿼리 및 대시보드 학습</td>
+                <td class="p-4 md:p-5 text-[#6b7a8d]"><i data-lucide="x-circle" class="inline text-[#c0392b] mr-1 w-4 h-4"></i>프롬프트 엔지니어링 의존</td>
+                <td class="p-4 md:p-5 bg-[#0f2142] text-[#f0ece3] text-center font-semibold"><i data-lucide="check" class="inline text-[#22a09d] mr-1 w-4 h-4"></i>일상적인 자연어 대화<br/>(Voice / Text)</td>
+              </tr>
+              <tr>
+                <td class="p-4 md:p-5 font-mono font-bold text-[#0f2142] border-r border-[#0f2142]/10">도입 속도/비용</td>
+                <td class="p-4 md:p-5 text-[#6b7a8d]"><i data-lucide="x-circle" class="inline text-[#c0392b] mr-1 w-4 h-4"></i>수십억 단위, 수년 소요</td>
+                <td class="p-4 md:p-5 text-[#6b7a8d]"><i data-lucide="x-circle" class="inline text-[#c0392b] mr-1 w-4 h-4"></i>지속적인 토큰 과금 발생</td>
+                <td class="p-4 md:p-5 bg-[#0f2142] text-[#f0ece3] text-center font-semibold"><i data-lucide="check" class="inline text-[#22a09d] mr-1 w-4 h-4"></i>빠르고 경제적인<br/>Add-on 구축</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="md:hidden text-center text-xs text-[#b85c38] mt-4 font-bold">← 표를 좌우로 밀어서 전체 내용을 확인하세요 →</p>
+    </div>
+  </section>
+
+  <section id="bridge" class="py-24 px-6 md:px-12 bg-[#e8e3d8] relative z-10 border-t border-[#0f2142]/10">
+    <div class="max-w-7xl mx-auto">
+      <p class="font-mono text-base font-bold tracking-[0.2em] text-[#b85c38] uppercase mb-2 uppercase">SOLUTION 01</p>
+      <h2 class="text-3xl md:text-4xl lg:text-[2.8rem] font-black text-[#0f2142] font-serif leading-[1.25] mb-12">
+        제너리 브릿지<br />
+        <span class="text-[#1a7a78] text-[70%] font-sans">Generi-Bridge · Legacy DB ↔ AI Agent</span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div class="bg-white border border-[#0f2142]/10 rounded-sm p-8 md:p-10 relative">
+          <div class="absolute top-[-1px] left-[-1px] w-4 h-4 border-t-2 border-l-2 border-[#b85c38]"></div>
+          <div class="absolute bottom-[-1px] right-[-1px] w-4 h-4 border-b-2 border-r-2 border-[#b85c38]"></div>
+          <div class="font-mono text-[0.8rem] md:text-[0.85rem] font-bold tracking-[0.18em] text-[#b85c38] uppercase mb-6 flex items-center gap-2 pb-3 border-b border-dashed border-[#b85c38]/30 uppercase">
+            SOLUTION 01 // GENERI-BRIDGE
+          </div>
+          <i data-lucide="database" class="text-[#0f2142] w-12 md:w-14 h-12 md:h-14 mb-4"></i>
+          <div class="font-serif text-[1.4rem] md:text-[1.6rem] font-black text-[#0f2142] mb-1">제너리 브릿지</div>
+          <div class="font-mono text-[0.75rem] md:text-[0.8rem] text-[#6b7a8d] tracking-[0.08em] uppercase mb-6">Legacy Data Intelligence Middleware</div>
+          
+          <div class="flex flex-col gap-3">
+            <div class="flex gap-3 items-start"><span class="font-mono text-[0.62rem] text-[#b85c38] w-[80px] md:w-[90px] shrink-0 pt-0.5 tracking-[0.04em] uppercase">TECH.</span><span class="text-[0.8rem] md:text-[0.83rem] text-[#6b7a8d] leading-[1.6]">Python / LangChain / RAG / FastAPI</span></div>
+            <div class="flex gap-3 items-start"><span class="font-mono text-[0.62rem] text-[#b85c38] w-[80px] md:w-[90px] shrink-0 pt-0.5 tracking-[0.04em] uppercase">TARGET.</span><span class="text-[0.8rem] md:text-[0.83rem] text-[#6b7a8d] leading-[1.6]">ERP·MES 보유 제조·중공업 기업</span></div>
+            <div class="flex gap-3 items-start"><span class="font-mono text-[0.62rem] text-[#b85c38] w-[80px] md:w-[90px] shrink-0 pt-0.5 tracking-[0.04em] uppercase">SECURITY.</span><span class="text-[0.8rem] md:text-[0.83rem] text-[#6b7a8d] leading-[1.6]">사내 폐쇄망 기반 · 데이터 외부유출 ZERO</span></div>
+            <div class="flex gap-3 items-start"><span class="font-mono text-[0.62rem] text-[#b85c38] w-[80px] md:w-[90px] shrink-0 pt-0.5 tracking-[0.04em] uppercase">DEPLOY.</span><span class="text-[0.8rem] md:text-[0.83rem] text-[#6b7a8d] leading-[1.6]">기존 시스템 100% 유지, Add-on 방식</span></div>
+          </div>
+        </div>
+
+        <div>
+          <ul class="flex flex-col gap-5 mb-8">
+            <li class="flex gap-4 items-start">
+              <div class="shrink-0 w-8 h-8 bg-[#1a7a78]/10 border border-[#1a7a78]/20 flex items-center justify-center rounded-sm text-[#1a7a78] mt-0.5"><i data-lucide="zap" class="w-4 h-4"></i></div>
+              <div><strong class="block text-[#0f2142] text-[0.85rem] md:text-[0.87rem] mb-1">기존 시스템 유지</strong><span class="text-[#6b7a8d] text-[0.8rem] md:text-[0.82rem] font-light">전면 교체 없이 기존 ERP/MES 위에 AI를 바로 얹습니다. 천문학적 교체 비용 불필요.</span></div>
+            </li>
+            <li class="flex gap-4 items-start">
+              <div class="shrink-0 w-8 h-8 bg-[#1a7a78]/10 border border-[#1a7a78]/20 flex items-center justify-center rounded-sm text-[#1a7a78] mt-0.5"><i data-lucide="shield-check" class="w-4 h-4"></i></div>
+              <div><strong class="block text-[#0f2142] text-[0.85rem] md:text-[0.87rem] mb-1">보안 RAG 아키텍처</strong><span class="text-[#6b7a8d] text-[0.8rem] md:text-[0.82rem] font-light">데이터 외부 유출 걱정 없는 사내 전용 AI 환경 구축. LangChain 기반 Secure RAG.</span></div>
+            </li>
+            <li class="flex gap-4 items-start">
+              <div class="shrink-0 w-8 h-8 bg-[#1a7a78]/10 border border-[#1a7a78]/20 flex items-center justify-center rounded-sm text-[#1a7a78] mt-0.5"><i data-lucide="message-circle" class="w-4 h-4"></i></div>
+              <div><strong class="block text-[#0f2142] text-[0.85rem] md:text-[0.87rem] mb-1">자연어 데이터 대화</strong><span class="text-[#6b7a8d] text-[0.8rem] md:text-[0.82rem] font-light">SQL 몰라도 말로 물으면 AI가 즉시 리포트를 작성합니다.</span></div>
+            </li>
+            <li class="flex gap-4 items-start">
+              <div class="shrink-0 w-8 h-8 bg-[#1a7a78]/10 border border-[#1a7a78]/20 flex items-center justify-center rounded-sm text-[#1a7a78] mt-0.5"><i data-lucide="server" class="w-4 h-4"></i></div>
+              <div><strong class="block text-[#0f2142] text-[0.85rem] md:text-[0.87rem] mb-1">FastAPI 실시간 서빙</strong><span class="text-[#6b7a8d] text-[0.8rem] md:text-[0.82rem] font-light">Low-Latency 경량 프레임워크로 기존 ERP와 지연 없이 연동.</span></div>
+            </li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="bg-[#1a7a78]/10 border border-[#1a7a78]/20 text-[#1a7a78] text-[0.7rem] px-2.5 py-1 font-mono tracking-[0.04em] uppercase">ERP/MES 연동</span>
+            <span class="bg-[#1a7a78]/10 border border-[#1a7a78]/20 text-[#1a7a78] text-[0.7rem] px-2.5 py-1 font-mono tracking-[0.04em] uppercase">Secure RAG</span>
+            <span class="bg-[#1a7a78]/10 border border-[#1a7a78]/20 text-[#1a7a78] text-[0.7rem] px-2.5 py-1 font-mono tracking-[0.04em] uppercase">LangChain</span>
+            <span class="bg-[#1a7a78]/10 border border-[#1a7a78]/20 text-[#1a7a78] text-[0.7rem] px-2.5 py-1 font-mono tracking-[0.04em] uppercase">FastAPI</span>
+            <span class="bg-[#1a7a78]/10 border border-[#1a7a78]/20 text-[#1a7a78] text-[0.7rem] px-2.5 py-1 font-mono tracking-[0.04em] uppercase">Zero Data Leakage</span>
+          </div>
+          <a href="#contact" class="inline-flex justify-center items-center bg-[#b85c38] text-white font-bold px-8 py-3 rounded-sm hover:bg-[#d4724a] transition text-sm text-center">브릿지 도입 문의 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="camp" class="py-24 px-6 md:px-12 bg-[#0f2142] relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <p class="font-mono text-base font-bold tracking-[0.2em] text-[#d4724a] uppercase mb-2 uppercase">SOLUTION 02</p>
+      <h2 class="text-3xl md:text-4xl lg:text-[2.8rem] font-black text-[#f0ece3] font-serif leading-[1.25] mb-12">
+        제너리 캠프<br />
+        <span class="text-[#d4724a] text-[70%] font-sans">Generi-Camp · 2026 지방선거 AI Suite</span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div class="bg-white/5 border border-white/10 rounded-sm p-8 md:p-10 relative">
+          <div class="absolute top-[-1px] left-[-1px] w-4 h-4 border-t-2 border-l-2 border-[#d4724a]"></div>
+          <div class="absolute bottom-[-1px] right-[-1px] w-4 h-4 border-b-2 border-r-2 border-[#d4724a]"></div>
+          <div class="font-mono text-[0.8rem] md:text-[0.85rem] font-bold tracking-[0.18em] text-[#d4724a] uppercase mb-6 flex items-center gap-2 pb-3 border-b border-dashed border-[#d4724a]/30 uppercase">
+            SOLUTION 02 // GENERI-CAMP
+          </div>
+          <i data-lucide="message-square" class="text-[#f0ece3] w-12 md:w-14 h-12 md:h-14 mb-4"></i>
+          <div class="font-serif text-[1.4rem] md:text-[1.6rem] font-black text-[#f0ece3] mb-1">제너리 캠프</div>
+          <div class="font-mono text-[0.75rem] md:text-[0.8rem] text-[#f0ece3]/50 tracking-[0.08em] uppercase mb-6 uppercase">2026 지방선거 특화 AI 캠프</div>
+          
+          <div class="flex flex-col gap-3">
+            <div class="bg-[#b85c38]/10 border border-[#b85c38]/20 px-4 py-3 text-[0.8rem] md:text-[0.82rem] text-[#f0ece3] flex items-center gap-3"><i data-lucide="bot" class="text-[#d4724a] w-5 h-5"></i><span>공약 AI 챗봇 — 24시간 유권자 응대</span></div>
+            <div class="bg-[#b85c38]/10 border border-[#b85c38]/20 px-4 py-3 text-[0.8rem] md:text-[0.82rem] text-[#f0ece3] flex items-center gap-3"><i data-lucide="bar-chart" class="text-[#d4724a] w-5 h-5"></i><span>여론 판세 대시보드 — 실시간 민심 분석</span></div>
+            <div class="bg-[#b85c38]/10 border border-[#b85c38]/20 px-4 py-3 text-[0.8rem] md:text-[0.82rem] text-[#f0ece3] flex items-center gap-3"><i data-lucide="pen-tool" class="text-[#d4724a] w-5 h-5"></i><span>AI 연설문 생성 — 타겟 맞춤형 즉시 생성</span></div>
+          </div>
+        </div>
+
+        <div>
+          <ul class="flex flex-col gap-5 mb-8">
+            <li class="flex gap-4 items-start">
+              <div class="shrink-0 w-8 h-8 bg-[#b85c38]/10 border border-[#b85c38]/20 flex items-center justify-center rounded-sm text-[#d4724a] mt-0.5"><i data-lucide="bot" class="w-4 h-4"></i></div>
+              <div><strong class="block text-[#f0ece3] text-[0.85rem] md:text-[0.87rem] mb-1">공약 AI 챗봇</strong><span class="text-[#f0ece3]/60 text-[0.8rem] md:text-[0.82rem] font-light">24시간 유권자의 질문에 후보자의 목소리로 답변합니다. (학습된 후보자 페르소나 적용)</span></div>
+            </li>
+            <li class="flex gap-4 items-start">
+              <div class="shrink-0 w-8 h-8 bg-[#b85c38]/10 border border-[#b85c38]/20 flex items-center justify-center rounded-sm text-[#d4724a] mt-0.5"><i data-lucide="bar-chart" class="w-4 h-4"></i></div>
+              <div><strong class="block text-[#f0ece3] text-[0.85rem] md:text-[0.87rem] mb-1">여론 판세 대시보드</strong><span class="text-[#f0ece3]/60 text-[0.8rem] md:text-[0.82rem] font-light">지역 커뮤니티와 SNS 여론을 실시간으로 분석합니다.</span></div>
+            </li>
+            <li class="flex gap-4 items-start">
+              <div class="shrink-0 w-8 h-8 bg-[#b85c38]/10 border border-[#b85c38]/20 flex items-center justify-center rounded-sm text-[#d4724a] mt-0.5"><i data-lucide="pen-tool" class="w-4 h-4"></i></div>
+              <div><strong class="block text-[#f0ece3] text-[0.85rem] md:text-[0.87rem] mb-1">AI 연설문 생성</strong><span class="text-[#f0ece3]/60 text-[0.8rem] md:text-[0.82rem] font-light">지역 이슈에 맞춘 타겟 맞춤형 연설문을 즉시 생성합니다.</span></div>
+            </li>
+            <li class="flex gap-4 items-start">
+              <div class="shrink-0 w-8 h-8 bg-[#b85c38]/10 border border-[#b85c38]/20 flex items-center justify-center rounded-sm text-[#d4724a] mt-0.5"><i data-lucide="zap" class="w-4 h-4"></i></div>
+              <div><strong class="block text-[#f0ece3] text-[0.85rem] md:text-[0.87rem] mb-1 uppercase">인건비 절감 & 소통 24배 확대</strong><span class="text-[#f0ece3]/60 text-[0.8rem] md:text-[0.82rem] font-light">단순 통계를 넘어, 유권자와 후보자를 잇는 소통의 무기를 제공합니다.</span></div>
+            </li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="bg-[#b85c38]/10 border border-[#b85c38]/20 text-[#d4724a] text-[0.7rem] px-2.5 py-1 font-mono tracking-[0.04em] uppercase">2026 지방선거</span>
+            <span class="bg-[#b85c38]/10 border border-[#b85c38]/20 text-[#d4724a] text-[0.7rem] px-2.5 py-1 font-mono tracking-[0.04em] uppercase uppercase">AI 챗봇</span>
+            <span class="bg-[#b85c38]/10 border border-[#b85c38]/20 text-[#d4724a] text-[0.7rem] px-2.5 py-1 font-mono tracking-[0.04em] uppercase">여론 분석</span>
+            <span class="bg-[#b85c38]/10 border border-[#b85c38]/20 text-[#d4724a] text-[0.7rem] px-2.5 py-1 font-mono tracking-[0.04em] uppercase">연설문 AI</span>
+          </div>
+          <a href="#contact" class="inline-flex justify-center items-center bg-[#b85c38] text-white font-bold px-8 py-3 rounded-sm hover:bg-[#d4724a] transition text-sm text-center">캠프 솔루션 문의 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="consulting" class="py-24 px-6 md:px-12 bg-[#e8e3d8] relative z-10 border-t border-[#0f2142]/10">
+    <div class="max-w-7xl mx-auto">
+      <p class="font-mono text-base font-bold tracking-[0.2em] text-[#b85c38] uppercase mb-2 uppercase">SOLUTION 03</p>
+      <h2 class="text-3xl md:text-4xl lg:text-[2.8rem] font-black text-[#0f2142] font-serif leading-[1.25] mb-12">
+        DX 컨설팅<br />
+        <span class="text-[#1e3a6a] text-[70%] font-sans">기술의 도입을 넘어, 스스로 진화하는 조직</span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div class="bg-white border border-[#0f2142]/10 rounded-sm p-8 md:p-10 relative">
+          <div class="absolute top-[-1px] left-[-1px] w-4 h-4 border-t-2 border-l-2 border-[#b85c38]"></div>
+          <div class="absolute bottom-[-1px] right-[-1px] w-4 h-4 border-b-2 border-r-2 border-[#b85c38]"></div>
+          <div class="font-mono text-[0.8rem] md:text-[0.85rem] font-bold tracking-[0.18em] text-[#b85c38] uppercase mb-6 flex items-center gap-2 pb-3 border-b border-dashed border-[#b85c38]/30 uppercase">
+            SOLUTION 03 // DX CONSULTING
+          </div>
+          <i data-lucide="pen-tool" class="text-[#0f2142] w-12 md:w-14 h-12 md:h-14 mb-4"></i>
+          <div class="font-serif text-[1.4rem] md:text-[1.6rem] font-black text-[#0f2142] mb-1">DX 컨설팅</div>
+          <div class="font-mono text-[0.75rem] md:text-[0.8rem] text-[#6b7a8d] tracking-[0.08em] uppercase mb-6 uppercase">진단 → 교육 → 자립: 하이브리드 인재 성장 모델</div>
+          
+          <div class="flex flex-col gap-2 mt-6">
+            <div class="flex gap-3 items-center py-2.5 border-b border-dashed border-[#0f2142]/10">
+              <span class="w-7 h-7 bg-[#1a7a78] text-white flex items-center justify-center font-mono text-xs font-bold rounded-sm">01</span>
+              <div><div class="text-[0.8rem] md:text-[0.82rem] font-bold text-[#0f2142]">진단 (Diagnosis)</div><div class="text-[0.72rem] md:text-[0.75rem] text-[#6b7a8d]">기업 맞춤형 AI 진단 — 무료 제공</div></div>
+            </div>
+            <div class="flex gap-3 items-center py-2.5 border-b border-dashed border-[#0f2142]/10">
+              <span class="w-7 h-7 bg-[#b85c38] text-white flex items-center justify-center font-mono text-xs font-bold rounded-sm">02</span>
+              <div><div class="text-[0.8rem] md:text-[0.82rem] font-bold text-[#0f2142]">교육 (Education)</div><div class="text-[0.72rem] md:text-[0.75rem] text-[#6b7a8d]">Python / AI 실무 교육 진행</div></div>
+            </div>
+            <div class="flex gap-3 items-center py-2.5">
+              <span class="w-7 h-7 bg-[#1e3a6a] text-white flex items-center justify-center font-mono text-xs font-bold rounded-sm">03</span>
+              <div><div class="text-[0.8rem] md:text-[0.82rem] font-bold text-[#0f2142]">자립 (Independence)</div><div class="text-[0.72rem] md:text-[0.75rem] text-[#6b7a8d]">하이브리드 인재 양성 완성</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <ul class="flex flex-col gap-5 mb-8">
+            <li class="flex gap-4 items-start">
+              <div class="shrink-0 w-8 h-8 bg-[#1e3a6a]/10 border border-[#1e3a6a]/20 flex items-center justify-center rounded-sm text-[#1e3a6a] mt-0.5"><i data-lucide="search" class="w-4 h-4"></i></div>
+              <div><strong class="block text-[#0f2142] text-[0.85rem] md:text-[0.87rem] mb-1">기업 맞춤형 AI 진단</strong><span class="text-[#6b7a8d] text-[0.8rem] md:text-[0.82rem] font-light">현장 방문 후 데이터 환경, 전산 구조, DX 준비도를 무료로 진단합니다.</span></div>
+            </li>
+            <li class="flex gap-4 items-start">
+              <div class="shrink-0 w-8 h-8 bg-[#1e3a6a]/10 border border-[#1e3a6a]/20 flex items-center justify-center rounded-sm text-[#1e3a6a] mt-0.5"><i data-lucide="server" class="w-4 h-4"></i></div>
+              <div><strong class="block text-[#0f2142] text-[0.85rem] md:text-[0.87rem] mb-1 uppercase">Python / AI 실무 교육</strong><span class="text-[#6b7a8d] text-[0.8rem] md:text-[0.82rem] font-light">레거시(현장)와 AI(기술)를 모두 다루는 실질적인 융합 인재를 배출합니다.</span></div>
+            </li>
+            <li class="flex gap-4 items-start">
+              <div class="shrink-0 w-8 h-8 bg-[#1e3a6a]/10 border border-[#1e3a6a]/20 flex items-center justify-center rounded-sm text-[#1e3a6a] mt-0.5"><i data-lucide="check-square" class="w-4 h-4"></i></div>
+              <div><strong class="block text-[#0f2142] text-[0.85rem] md:text-[0.87rem] mb-1">하이브리드 개발자 양성</strong><span class="text-[#6b7a8d] text-[0.8rem] md:text-[0.82rem] font-light">제너리는 시스템만 남기고 떠나지 않습니다. 자체 DX 역량을 완성합니다.</span></div>
+            </li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="bg-[#0f2142]/5 border border-[#0f2142]/10 text-[#1e3a6a] text-[0.7rem] px-2.5 py-1 font-mono tracking-[0.04em] uppercase uppercase">AI 진단 무료</span>
+            <span class="bg-[#0f2142]/5 border border-[#0f2142]/10 text-[#1e3a6a] text-[0.7rem] px-2.5 py-1 font-mono tracking-[0.04em] uppercase uppercase">Python 교육</span>
+            <span class="bg-[#0f2142]/5 border border-[#0f2142]/10 text-[#1e3a6a] text-[0.7rem] px-2.5 py-1 font-mono tracking-[0.04em] uppercase">하이브리드 개발자</span>
+          </div>
+          <a href="#contact" class="inline-flex justify-center items-center bg-[#b85c38] text-white font-bold px-8 py-3 rounded-sm hover:bg-[#d4724a] transition text-sm text-center">컨설팅 문의 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-24 px-6 md:px-12 bg-[#0f2142] relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <p class="font-mono text-xs tracking-[0.2em] text-[#d4724a] uppercase mb-4 uppercase">About Generi</p>
+      <h2 class="text-3xl md:text-4xl lg:text-[2.8rem] font-black text-[#f0ece3] font-serif leading-[1.25] mb-12">
+        진정한 DX는 기술, 현장, 사람의<br />
+        <span class="text-[#22a09d]">완벽한 연결에서 완성됩니다</span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div>
+          <blockquote class="font-serif text-[1.1rem] md:text-[1.7rem] font-black leading-[1.45] text-[#f0ece3] pl-6 border-l-[3px] border-[#b85c38] mb-8">
+            "현장을 모르는 AI는 반쪽짜리입니다.<br />제너리는 산업 현장의 언어와 AI의 언어를 동시에 말합니다."
+          </blockquote>
+          <p class="text-[0.88rem] md:text-[0.92rem] text-[#f0ece3]/60 leading-[2] font-light mb-10">
+            제너리(Generi)는 <strong class="text-[#f0ece3] font-medium">레거시(Legacy)의 깊은 이해</strong>와 <strong class="text-[#f0ece3] font-medium uppercase">생성형 AI(Generative)의 최신 기술</strong>을 함께 보유한 산업용 DX 솔루션 기업입니다.<br /><br />
+            단순한 IT 컨설팅이 아닙니다. 대형 프로젝트를 통해 쌓아온 <strong class="text-[#f0ece3] font-medium">풍부한 실전 경험</strong>을 바탕으로, 귀사의 레거시 자산을 AI 경쟁력으로 전환해 드립니다.<br /><br />
+            가장 안전한 데이터 연결(Generi-Bridge), 가장 기민한 현장의 연결(Generi-Camp), 가장 지속가능한 인재의 연결(DX Consulting).<br />
+            <strong class="text-[#f0ece3] font-medium uppercase">레거시를 훼손하지 않으면서, 미래로 연결하는 교량</strong>이 되겠습니다.
+          </p>
+        </div>
+
+        <div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+            <div class="bg-white/5 border border-white/5 p-5 relative overflow-hidden">
+              <div class="absolute top-0 left-0 w-[2px] h-full bg-[#22a09d] opacity-50"></div>
+              <i data-lucide="database" class="text-[#22a09d] w-6 h-6 mb-2"></i>
+              <h4 class="font-serif text-[0.92rem] font-bold text-[#f0ece3] mb-1 uppercase">산업 현장 전문성</h4>
+              <p class="text-[0.78rem] text-[#f0ece3]/50 leading-[1.7] font-light">제조·중공업 워크플로우를 깊이 이해하는 팀.</p>
+            </div>
+            <div class="bg-white/5 border border-white/5 p-5 relative overflow-hidden">
+              <div class="absolute top-0 left-0 w-[2px] h-full bg-[#22a09d] opacity-50"></div>
+              <i data-lucide="bot" class="text-[#22a09d] w-6 h-6 mb-2"></i>
+              <h4 class="font-serif text-[0.92rem] font-bold text-[#f0ece3] mb-1 uppercase">최신 AI 기술력</h4>
+              <p class="text-[0.78rem] text-[#f0ece3]/50 leading-[1.7] font-light uppercase">LLM, RAG, LangChain 실전 적용 역량.</p>
+            </div>
+            <div class="bg-white/5 border border-white/5 p-5 relative overflow-hidden">
+              <div class="absolute top-0 left-0 w-[2px] h-full bg-[#22a09d] opacity-50"></div>
+              <i data-lucide="lock" class="text-[#22a09d] w-6 h-6 mb-2"></i>
+              <h4 class="font-serif text-[0.92rem] font-bold text-[#f0ece3] mb-1 uppercase">보안 최우선</h4>
+              <p class="text-[0.78rem] text-[#f0ece3]/50 leading-[1.7] font-light uppercase">사내 폐쇄망 기반 On-premise 보안 구조.</p>
+            </div>
+            <div class="bg-white/5 border border-white/5 p-5 relative overflow-hidden">
+              <div class="absolute top-0 left-0 w-[2px] h-full bg-[#22a09d] opacity-50"></div>
+              <i data-lucide="zap" class="text-[#22a09d] w-6 h-6 mb-2"></i>
+              <h4 class="font-serif text-[0.92rem] font-bold text-[#f0ece3] mb-1 uppercase">비용 효율 극대화</h4>
+              <p class="text-[0.78rem] text-[#f0ece3]/50 leading-[1.7] font-light">기존 시스템 유지로 최소 비용 AI 도입.</p>
+            </div>
+          </div>
+
+          <div class="bg-white/5 border border-white/10 rounded-sm p-6 md:p-8 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#1a7a78]/10 to-transparent pointer-events-none"></div>
+            <div class="font-mono text-[0.55rem] md:text-[0.6rem] tracking-[0.18em] text-[#d4724a] uppercase mb-5 flex items-center gap-2 border-b border-[#b85c38]/20 pb-2 uppercase">
+              GENERI // FOUNDING TEAM PROFILE
+            </div>
+            <div class="flex items-center gap-4 mb-4">
+              <div>
+                <div class="font-serif font-bold text-base text-[#f0ece3] tracking-wide uppercase">GENERI</div>
+                <div class="font-mono text-[0.6rem] md:text-[0.62rem] text-[#f0ece3]/45 tracking-[0.1em] uppercase">AI & REALITY SOLUTIONS</div>
+              </div>
+            </div>
+            <div class="font-mono text-[0.65rem] md:text-[0.68rem] text-[#d4724a] tracking-[0.1em] uppercase mb-4 uppercase">Founder & CEO · www.generi.cloud</div>
+            <ul class="flex flex-col gap-2 mt-4">
+              <li class="text-[0.8rem] md:text-[0.84rem] text-[#f0ece3]/60 flex gap-2 items-start"><span class="text-[#22a09d] font-mono shrink-0">→</span>삼성그룹 대형 프로젝트 및 중공업 현장 수행</li>
+              <li class="text-[0.8rem] md:text-[0.84rem] text-[#f0ece3]/60 flex gap-2 items-start"><span class="text-[#22a09d] font-mono shrink-0">→</span>SW 개발 및 레거시 최적화 전문</li>
+              <li class="text-[0.8rem] md:text-[0.84rem] text-[#f0ece3]/60 flex gap-2 items-start"><span class="text-[#22a09d] font-mono shrink-0">→</span>제조 공정 워크플로우 분석 전문가</li>
+            </ul>
+            <div class="flex flex-wrap gap-1.5 mt-5">
+              <span class="bg-white/5 border border-white/10 text-[#f0ece3]/55 text-[0.65rem] md:text-[0.71rem] px-2.5 py-1 rounded-sm font-mono uppercase">PowerBuilder</span>
+              <span class="bg-white/5 border border-white/10 text-[#f0ece3]/55 text-[0.65rem] md:text-[0.71rem] px-2.5 py-1 rounded-sm font-mono uppercase uppercase">Python/AI</span>
+              <span class="bg-white/5 border border-white/10 text-[#f0ece3]/55 text-[0.65rem] md:text-[0.71rem] px-2.5 py-1 rounded-sm font-mono uppercase">삼성그룹</span>
+              <span class="bg-white/5 border border-white/10 text-[#f0ece3]/55 text-[0.65rem] md:text-[0.71rem] px-2.5 py-1 rounded-sm font-mono uppercase uppercase">RAG/LangChain</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 px-6 md:px-12 bg-[#e8e3d8] relative z-10 border-t border-[#0f2142]/10">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl lg:text-[2.8rem] font-black text-[#0f2142] font-serif leading-[1.25] mb-12">
+        비싼 시스템 교체 전에,<br />
+        <span class="text-[#b85c38]">무료 진단부터 받아보세요.</span>
+      </h2>
+      
+      <div class="grid lg:grid-cols-[1fr_1.2fr] gap-16 items-start">
+        <div>
+          <p class="text-[#6b7a8d] mb-8 leading-relaxed font-light text-[0.9rem] md:text-[0.95rem]">현장 경험 풍부한 전문가가 직접 귀사의 상황을 무료로 진단해 드립니다. 부담 없이 연락주세요.</p>
+          <div class="flex flex-col gap-4 mt-6">
+            <div class="flex items-start gap-4 text-[#6b7a8d] text-[0.85rem] md:text-[0.87rem]">
+              <span class="font-mono text-[0.62rem] tracking-[0.14em] text-[#b85c38] shrink-0 w-11 pt-1 uppercase uppercase">EMAIL</span>
+              <span>sales@generi.cloud</span>
+            </div>
+            <div class="flex items-start gap-4 text-[#6b7a8d] text-[0.85rem] md:text-[0.87rem]">
+              <span class="font-mono text-[0.62rem] tracking-[0.14em] text-[#b85c38] shrink-0 w-11 pt-1 uppercase uppercase">WEB</span>
+              <span>www.generi.cloud</span>
+            </div>
+          </div>
+        </div>
+
+        <form id="contact-form" class="flex flex-col gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="flex flex-col gap-1.5">
+              <label class="font-mono text-[0.6rem] md:text-[0.66rem] tracking-[0.14em] text-[#6b7a8d] uppercase uppercase">이름</label>
+              <input type="text" name="user_name" required class="w-full bg-white border border-[#0f2142]/10 p-3 text-[0.85rem] md:text-[0.87rem] text-[#0f2142] focus:outline-none focus:border-[#1a7a78] focus:ring-2 focus:ring-[#1a7a78]/10 rounded-sm transition" placeholder="홍길동" />
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label class="font-mono text-[0.6rem] md:text-[0.66rem] tracking-[0.14em] text-[#6b7a8d] uppercase uppercase">회사명</label>
+              <input type="text" name="company_name" required class="w-full bg-white border border-[#0f2142]/10 p-3 text-[0.85rem] md:text-[0.87rem] text-[#0f2142] focus:outline-none focus:border-[#1a7a78] focus:ring-2 focus:ring-[#1a7
