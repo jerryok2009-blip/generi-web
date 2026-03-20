@@ -7,7 +7,6 @@
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
   <style>
     body {
@@ -49,7 +48,6 @@
   <div id="mobile-menu" class="hidden fixed top-[68px] left-0 right-0 bg-[#0f2142] p-6 flex flex-col gap-4 z-40 border-b border-white/10 md:hidden">
     <a href="#problem" class="mobile-link text-white/80 py-2 border-b border-white/10">문제 인식</a>
     <a href="#how" class="mobile-link text-white/80 py-2 border-b border-white/10">작동 원리</a>
-    <a href="#compare" class="mobile-link text-white/80 py-2 border-b border-white/10">AI 도입 비교</a>
     <a href="#bridge" class="mobile-link text-white/80 py-2 border-b border-white/10">제너리 브릿지</a>
     <a href="#camp" class="mobile-link text-white/80 py-2 border-b border-white/10">제너리 캠프</a>
     <a href="#consulting" class="mobile-link text-white/80 py-2 border-b border-white/10">DX 컨설팅</a>
@@ -159,47 +157,6 @@
     </div>
   </section>
 
-  <section class="py-20 px-6 md:px-12 bg-[#e8e3d8] relative z-10">
-    <div class="max-w-7xl mx-auto">
-      <p class="font-mono text-sm tracking-[0.2em] text-[#b85c38] uppercase flex items-center gap-2 mb-4 font-semibold">
-        진정한 디지털 전환(DX)을 완성하는
-      </p>
-      <h2 class="text-3xl md:text-4xl lg:text-[2.8rem] font-black text-[#0f2142] font-serif leading-[1.25] mb-4">
-        제너리의 <span class="text-[#1a7a78]">3대 서비스</span>
-      </h2>
-      <p class="text-[0.9rem] md:text-[0.95rem] text-[#6b7a8d] max-w-[580px] leading-[1.95] font-light mb-12">
-        레거시를 훼손하지 않으면서 가장 빠르고 안전하게 미래와 융합하는 제너리만의 DX 생태계.
-      </p>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-[1px] md:bg-[#0f2142]/10 md:border md:border-[#0f2142]/10">
-        <div class="bg-white p-8 md:p-10 relative overflow-hidden transition-colors hover:bg-[#e8e3d8]">
-          <div class="absolute top-0 left-0 right-0 h-[3px] bg-[#1a7a78]"></div>
-          <div class="font-mono text-base font-bold tracking-[0.2em] text-[#6b7a8d] mb-4 uppercase">SOLUTION 01</div>
-          <i data-lucide="database" class="text-[#1a7a78] w-9 h-9 mb-4"></i>
-          <h4 class="font-serif text-[1.1rem] md:text-[1.15rem] font-black text-[#0f2142] mb-1">제너리 브릿지</h4>
-          <div class="font-mono text-[0.7rem] text-[#6b7a8d] tracking-[0.08em] uppercase mb-4">Generi-Bridge</div>
-          <p class="text-[0.8rem] md:text-[0.82rem] text-[#6b7a8d] leading-[1.8] font-light">레거시 DB와 AI 에이전트의 안전한 연결. 기존 ERP/MES 위에 AI를 바로 얹습니다.</p>
-        </div>
-        <div class="bg-white p-8 md:p-10 relative overflow-hidden transition-colors hover:bg-[#e8e3d8]">
-          <div class="absolute top-0 left-0 right-0 h-[3px] bg-[#b85c38]"></div>
-          <div class="font-mono text-base font-bold tracking-[0.2em] text-[#6b7a8d] mb-4 uppercase">SOLUTION 02</div>
-          <i data-lucide="message-square" class="text-[#b85c38] w-9 h-9 mb-4"></i>
-          <h4 class="font-serif text-[1.1rem] md:text-[1.15rem] font-black text-[#0f2142] mb-1">제너리 캠프</h4>
-          <div class="font-mono text-[0.7rem] text-[#6b7a8d] tracking-[0.08em] uppercase mb-4">Generi-Camp</div>
-          <p class="text-[0.8rem] md:text-[0.82rem] text-[#6b7a8d] leading-[1.8] font-light">2026 지방선거 특화 AI 캠프. 가장 기민하게 민심과 연결되는 선거 AI 솔루션.</p>
-        </div>
-        <div class="bg-white p-8 md:p-10 relative overflow-hidden transition-colors hover:bg-[#e8e3d8]">
-          <div class="absolute top-0 left-0 right-0 h-[3px] bg-[#1e3a6a]"></div>
-          <div class="font-mono text-base font-bold tracking-[0.2em] text-[#6b7a8d] mb-4 uppercase">SOLUTION 03</div>
-          <i data-lucide="pen-tool" class="text-[#1e3a6a] w-9 h-9 mb-4"></i>
-          <h4 class="font-serif text-[1.1rem] md:text-[1.15rem] font-black text-[#0f2142] mb-1">DX 컨설팅</h4>
-          <div class="font-mono text-[0.7rem] text-[#6b7a8d] tracking-[0.08em] uppercase mb-4 uppercase">DX Consulting</div>
-          <p class="text-[0.8rem] md:text-[0.82rem] text-[#6b7a8d] leading-[1.8] font-light">기술의 도입을 넘어, 스스로 진화하는 조직을 만들다. 하이브리드 인재 양성의 교량.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="how" class="py-24 px-6 md:px-12 bg-[#162d55] relative z-10">
     <div class="max-w-7xl mx-auto">
       <p class="font-mono text-sm tracking-[0.2em] text-[#d4724a] uppercase flex items-center gap-2 mb-4 font-semibold uppercase">
@@ -248,6 +205,47 @@
         <div>
           <h5 class="font-bold text-[0.9rem] text-[#f0ece3] mb-2 uppercase">완벽한 보안 — AI가 데이터를 훔쳐가지 않습니다</h5>
           <p class="text-[0.8rem] md:text-[0.82rem] text-[#f0ece3]/60 leading-[1.8]">제너리 브릿지는 귀사가 현재 사용 중인 모든 레거시 시스템(기존 ERP/MES) 및 사내 DB 위에서 작동하는 '조회 에이전트'입니다. AI는 필요한 데이터만 순간적으로 조회하며, 원본 데이터베이스를 외부로 유출하지 않습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-6 md:px-12 bg-[#e8e3d8] relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <p class="font-mono text-sm tracking-[0.2em] text-[#b85c38] uppercase flex items-center gap-2 mb-4 font-semibold">
+        진정한 디지털 전환(DX)을 완성하는
+      </p>
+      <h2 class="text-3xl md:text-4xl lg:text-[2.8rem] font-black text-[#0f2142] font-serif leading-[1.25] mb-4">
+        제너리 <span class="text-[#1a7a78]">3대서비스</span>
+      </h2>
+      <p class="text-[0.9rem] md:text-[0.95rem] text-[#6b7a8d] max-w-[580px] leading-[1.95] font-light mb-12">
+        레거시를 훼손하지 않으면서 가장 빠르고 안전하게 미래와 융합하는 제너리만의 DX 생태계.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-[1px] md:bg-[#0f2142]/10 md:border md:border-[#0f2142]/10">
+        <div class="bg-white p-8 md:p-10 relative overflow-hidden transition-colors hover:bg-[#e8e3d8]">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-[#1a7a78]"></div>
+          <div class="font-mono text-base font-bold tracking-[0.2em] text-[#6b7a8d] mb-4 uppercase">SOLUTION 01</div>
+          <i data-lucide="database" class="text-[#1a7a78] w-9 h-9 mb-4"></i>
+          <h4 class="font-serif text-[1.1rem] md:text-[1.15rem] font-black text-[#0f2142] mb-1">제너리 브릿지</h4>
+          <div class="font-mono text-[0.7rem] text-[#6b7a8d] tracking-[0.08em] uppercase mb-4">Generi-Bridge</div>
+          <p class="text-[0.8rem] md:text-[0.82rem] text-[#6b7a8d] leading-[1.8] font-light">레거시 DB와 AI 에이전트의 안전한 연결. 기존 ERP/MES 위에 AI를 바로 얹습니다.</p>
+        </div>
+        <div class="bg-white p-8 md:p-10 relative overflow-hidden transition-colors hover:bg-[#e8e3d8]">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-[#b85c38]"></div>
+          <div class="font-mono text-base font-bold tracking-[0.2em] text-[#6b7a8d] mb-4 uppercase">SOLUTION 02</div>
+          <i data-lucide="message-square" class="text-[#b85c38] w-9 h-9 mb-4"></i>
+          <h4 class="font-serif text-[1.1rem] md:text-[1.15rem] font-black text-[#0f2142] mb-1">제너리 캠프</h4>
+          <div class="font-mono text-[0.7rem] text-[#6b7a8d] tracking-[0.08em] uppercase mb-4">Generi-Camp</div>
+          <p class="text-[0.8rem] md:text-[0.82rem] text-[#6b7a8d] leading-[1.8] font-light">2026 지방선거 특화 AI 캠프. 가장 기민하게 민심과 연결되는 선거 AI 솔루션.</p>
+        </div>
+        <div class="bg-white p-8 md:p-10 relative overflow-hidden transition-colors hover:bg-[#e8e3d8]">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-[#1e3a6a]"></div>
+          <div class="font-mono text-base font-bold tracking-[0.2em] text-[#6b7a8d] mb-4 uppercase">SOLUTION 03</div>
+          <i data-lucide="pen-tool" class="text-[#1e3a6a] w-9 h-9 mb-4"></i>
+          <h4 class="font-serif text-[1.1rem] md:text-[1.15rem] font-black text-[#0f2142] mb-1">DX 컨설팅</h4>
+          <div class="font-mono text-[0.7rem] text-[#6b7a8d] tracking-[0.08em] uppercase mb-4 uppercase">DX Consulting</div>
+          <p class="text-[0.8rem] md:text-[0.82rem] text-[#6b7a8d] leading-[1.8] font-light">기술의 도입을 넘어, 스스로 진화하는 조직을 만들다. 하이브리드 인재 양성의 교량.</p>
         </div>
       </div>
     </div>
@@ -583,7 +581,10 @@
           </div>
         </div>
 
-        <form id="contact-form" class="flex flex-col gap-4">
+        <form id="contact-form" action="https://formsubmit.co/sales@generi.cloud" method="POST" class="flex flex-col gap-4">
+          <input type="hidden" name="_subject" value="[제너리 웹사이트] 새로운 문의가 도착했습니다!">
+          <input type="hidden" name="_captcha" value="false">
+          
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="flex flex-col gap-1.5">
               <label class="font-mono text-[0.6rem] md:text-[0.66rem] tracking-[0.14em] text-[#6b7a8d] uppercase">이름</label>
