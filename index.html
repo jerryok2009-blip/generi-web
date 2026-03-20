@@ -41,8 +41,8 @@
       <li><a href="#contact" class="bg-[#b85c38] text-white px-5 py-2 rounded-sm hover:bg-[#d4724a] transition font-bold">무료 진단</a></li>
     </ul>
 
-    <button id="menu-btn" class="md:hidden text-white">
-      <i data-lucide="menu" class="w-7 h-7"></i>
+    <button id="menu-btn" class="md:hidden text-white p-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
     </button>
   </nav>
 
@@ -75,7 +75,7 @@
         </div>
       </div>
 
-      <div class="flex justify-center w-full">
+      <div class="hidden md:flex justify-center w-full">
         <div class="border border-white/10 bg-white/5 p-6 md:p-10 rounded-sm relative w-full max-w-[460px]">
           <div class="absolute top-[-1px] left-[-1px] w-3.5 h-3.5 border-t-2 border-l-2 border-[#b85c38]"></div>
           <div class="absolute bottom-[-1px] right-[-1px] w-3.5 h-3.5 border-b-2 border-r-2 border-[#b85c38]"></div>
@@ -253,7 +253,7 @@
     </div>
   </section>
 
-  <section id="compare" class="py-24 px-6 md:px-12 bg-[#f0ece3] relative z-10">
+  <section id="compare" class="hidden md:block py-24 px-6 md:px-12 bg-[#f0ece3] relative z-10">
     <div class="max-w-7xl mx-auto overflow-hidden">
       <h2 class="text-3xl md:text-4xl lg:text-[2.8rem] font-black text-[#0f2142] font-serif leading-[1.25] mb-4">
         왜 <span class="text-[#1a7a78]">제너리 솔루션</span>인가?
@@ -586,9 +586,50 @@
         <form id="contact-form" class="flex flex-col gap-4">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="flex flex-col gap-1.5">
-              <label class="font-mono text-[0.6rem] md:text-[0.66rem] tracking-[0.14em] text-[#6b7a8d] uppercase uppercase">이름</label>
+              <label class="font-mono text-[0.6rem] md:text-[0.66rem] tracking-[0.14em] text-[#6b7a8d] uppercase">이름</label>
               <input type="text" name="user_name" required class="w-full bg-white border border-[#0f2142]/10 p-3 text-[0.85rem] md:text-[0.87rem] text-[#0f2142] focus:outline-none focus:border-[#1a7a78] focus:ring-2 focus:ring-[#1a7a78]/10 rounded-sm transition" placeholder="홍길동" />
             </div>
             <div class="flex flex-col gap-1.5">
-              <label class="font-mono text-[0.6rem] md:text-[0.66rem] tracking-[0.14em] text-[#6b7a8d] uppercase uppercase">회사명</label>
-              <input type="text" name="company_name" required class="w-full bg-white border border-[#0f2142]/10 p-3 text-[0.85rem] md:text-[0.87rem] text-[#0f2142] focus:outline-none focus:border-[#1a7a78] focus:ring-2 focus:ring-[#1a7
+              <label class="font-mono text-[0.6rem] md:text-[0.66rem] tracking-[0.14em] text-[#6b7a8d] uppercase">회사명</label>
+              <input type="text" name="company_name" required class="w-full bg-white border border-[#0f2142]/10 p-3 text-[0.85rem] md:text-[0.87rem] text-[#0f2142] focus:outline-none focus:border-[#1a7a78] focus:ring-2 focus:ring-[#1a7a78]/10 rounded-sm transition" placeholder="제너리" />
+            </div>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label class="font-mono text-[0.6rem] md:text-[0.66rem] tracking-[0.14em] text-[#6b7a8d] uppercase">연락처</label>
+            <input type="tel" name="phone" required class="w-full bg-white border border-[#0f2142]/10 p-3 text-[0.85rem] md:text-[0.87rem] text-[#0f2142] focus:outline-none focus:border-[#1a7a78] focus:ring-2 focus:ring-[#1a7a78]/10 rounded-sm transition" placeholder="010-0000-0000" />
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label class="font-mono text-[0.6rem] md:text-[0.66rem] tracking-[0.14em] text-[#6b7a8d] uppercase">문의 내용</label>
+            <textarea name="message" rows="4" required class="w-full bg-white border border-[#0f2142]/10 p-3 text-[0.85rem] md:text-[0.87rem] text-[#0f2142] focus:outline-none focus:border-[#1a7a78] focus:ring-2 focus:ring-[#1a7a78]/10 rounded-sm transition" placeholder="도입을 고민하시는 시스템이나 궁금한 점을 편하게 적어주세요."></textarea>
+          </div>
+          <button type="submit" class="bg-[#0f2142] text-white font-bold py-4 rounded-sm hover:bg-[#1e3a6a] transition mt-2">무료 진단 신청하기</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-[#0f2142] py-8 border-t border-white/10 text-center text-white/50 text-[0.75rem] md:text-[0.8rem]">
+    <div class="max-w-7xl mx-auto px-6">
+      <p>&copy; 2026 Generi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Lucide Icons 초기화 (PC용)
+    lucide.createIcons();
+
+    // 모바일 메뉴 열기/닫기 동작
+    document.getElementById('menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // 모바일 메뉴의 링크를 클릭하면 메뉴창 닫기
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    mobileLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
