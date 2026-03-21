@@ -581,7 +581,12 @@
           </div>
         </div>
 
-        <form id="contact-form" onsubmit="handleMailSubmit(event)" class="flex flex-col gap-4">
+        <form id="contact-form" class="flex flex-col gap-4">
+          <input type="hidden" name="access_key" value="여기에_발급받은_키를_넣으세요">
+          <input type="hidden" name="subject" value="[제너리 웹사이트] 새로운 무료 진단 신청이 접수되었습니다.">
+          <input type="hidden" name="from_name" value="GENERI 홈페이지 알림">
+          <input type="hidden" name="replyto" value="sales@generi.cloud">
+          
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="flex flex-col gap-1.5">
               <label class="font-mono text-[0.6rem] md:text-[0.66rem] tracking-[0.14em] text-[#6b7a8d] uppercase">이름</label>
@@ -613,7 +618,7 @@
   </footer>
 
   <script>
-    // Lucide Icons 초기화 (PC용)
+    // Lucide Icons 초기화
     lucide.createIcons();
 
     // 모바일 메뉴 열기/닫기 동작
@@ -621,7 +626,6 @@
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
 
-    // 모바일 메뉴의 링크를 클릭하면 메뉴창 닫기
     const mobileLinks = document.querySelectorAll('.mobile-link');
     mobileLinks.forEach(function(link) {
       link.addEventListener('click', function() {
@@ -629,20 +633,51 @@
       });
     });
 
-    // 이메일 전송 기능 (mailto 방식)
-    function handleMailSubmit(e) {
+    // [수정완료] 이메일 전송 스크립트 (Web3Forms AJAX 연동)
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(e) {
       e.preventDefault();
-      const form = e.target;
-      const name = form.user_name.value;
-      const company = form.company_name.value;
-      const phone = form.phone.value;
-      const message = form.message.value;
+      
+      // 사용자 필수 키 체크
+      if(form.access_key.value === "여기에_발급받은_키를_넣으세요" || form.access_key.value === "") {
+        alert("알림: HTML 소스 코드에서 Web3Forms Access Key를 먼저 입력해주세요!");
+        return;
+      }
 
-      const subject = encodeURIComponent(`[제너리 문의] ${company} ${name}님`);
-      const body = encodeURIComponent(`이름: ${name}\n회사명: ${company}\n연락처: ${phone}\n\n내용:\n${message}`);
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.innerText;
+      btn.innerText = '전송 중... 잠시만 기다려주세요';
+      btn.disabled = true;
 
-      window.location.href = `mailto:sales@generi.cloud?subject=${subject}&body=${body}`;
-    }
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
+      })
+      .then(async (response) => {
+        if (response.status == 200) {
+          alert('성공적으로 잘 보냈습니다! 담당자가 확인 후 연락드리겠습니다.');
+          form.reset(); // 입력창 초기화(리셋)
+        } else {
+          alert('전송에 실패했습니다. 다시 시도해주세요.');
+        }
+      })
+      .catch(error => {
+        console.log(error);
+        alert('네트워크 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+      })
+      .finally(() => {
+        btn.innerText = originalText;
+        btn.disabled = false;
+      });
+    });
   </script>
 </body>
 </html>
