@@ -581,10 +581,7 @@
           </div>
         </div>
 
-        <form id="contact-form" action="https://formsubmit.co/sales@generi.cloud" method="POST" class="flex flex-col gap-4">
-          <input type="hidden" name="_subject" value="[제너리 웹사이트] 새로운 문의가 도착했습니다!">
-          <input type="hidden" name="_captcha" value="false">
-          
+        <form id="contact-form" onsubmit="handleMailSubmit(event)" class="flex flex-col gap-4">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="flex flex-col gap-1.5">
               <label class="font-mono text-[0.6rem] md:text-[0.66rem] tracking-[0.14em] text-[#6b7a8d] uppercase">이름</label>
@@ -631,6 +628,21 @@
         document.getElementById('mobile-menu').classList.add('hidden');
       });
     });
+
+    // 이메일 전송 기능 (mailto 방식)
+    function handleMailSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const name = form.user_name.value;
+      const company = form.company_name.value;
+      const phone = form.phone.value;
+      const message = form.message.value;
+
+      const subject = encodeURIComponent(`[제너리 문의] ${company} ${name}님`);
+      const body = encodeURIComponent(`이름: ${name}\n회사명: ${company}\n연락처: ${phone}\n\n내용:\n${message}`);
+
+      window.location.href = `mailto:sales@generi.cloud?subject=${subject}&body=${body}`;
+    }
   </script>
 </body>
 </html>
