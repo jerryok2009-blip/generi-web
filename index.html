@@ -30,12 +30,11 @@
     <a href="#" class="flex items-center gap-2 text-white font-bold text-xl tracking-wider font-serif">GENERI</a>
     
     <ul class="hidden md:flex items-center gap-8 text-white/70 font-medium text-sm">
-      <li><a href="#problem" class="hover:text-white transition">문제</a></li>
-      <li><a href="#how" class="hover:text-white transition">원리</a></li>
-      <li><a href="#compare" class="hover:text-white transition">비교</a></li>
-      <li><a href="#bridge" class="hover:text-white transition">브릿지</a></li>
-      <li><a href="#camp" class="hover:text-white transition">캠프</a></li>
-      <li><a href="#consulting" class="hover:text-white transition">컨설팅</a></li>
+      <li><a href="#problem" class="hover:text-white transition">문제 인식</a></li>
+      <li><a href="#how" class="hover:text-white transition">작동 원리</a></li>
+      <li><a href="#bridge" class="hover:text-white transition">제너리 브릿지</a></li>
+      <li><a href="#camp" class="hover:text-white transition">제너리 캠프</a></li>
+      <li><a href="#consulting" class="hover:text-white transition">DX 컨설팅</a></li>
       <li><a href="#about" class="hover:text-white transition">회사소개</a></li>
       <li><a href="#contact" class="bg-[#b85c38] text-white px-5 py-2 rounded-sm hover:bg-[#d4724a] transition font-bold">무료 진단</a></li>
     </ul>
@@ -65,7 +64,7 @@
         <p class="text-[#f0ece3]/70 text-base md:text-lg mb-10 max-w-lg leading-relaxed font-light">
           수억 원이 드는 시스템 전면 교체? 이제 필요 없습니다.<br />
           기존 전산망을 <strong class="text-white font-medium">가장 안전하게 AI와 연결</strong>하는<br />
-          국내 최고의 DX 파트너, <strong class="text-white font-medium">제너리(Generi)</strong>입니다.
+          국내 최고의 DX 파트너, <strong class="text-white font-medium uppercase">Generi</strong>입니다.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="#contact" class="inline-flex justify-center items-center bg-[#b85c38] text-white font-bold px-8 py-4 rounded-sm hover:bg-[#d4724a] transition transform hover:-translate-y-1 shadow-lg shadow-[#b85c38]/20 tracking-wide text-sm text-center">무료 AI 진단 신청 →</a>
@@ -77,18 +76,18 @@
         <div class="border border-white/10 bg-white/5 p-6 md:p-10 rounded-sm relative w-full max-w-[460px]">
           <div class="absolute top-[-1px] left-[-1px] w-3.5 h-3.5 border-t-2 border-l-2 border-[#b85c38]"></div>
           <div class="absolute bottom-[-1px] right-[-1px] w-3.5 h-3.5 border-b-2 border-r-2 border-[#b85c38]"></div>
-          <div class="text-[#b85c38] font-mono text-[0.65rem] mb-6 flex items-center gap-2 border-b border-[#b85c38]/30 pb-2 tracking-[0.15em]">
-            GENERI-BRIDGE // DATA FLOW INTERFACE
+          <div class="text-[#b85c38] font-mono text-[0.65rem] mb-6 flex items-center gap-2 border-b border-[#b85c38]/30 pb-2 tracking-[0.15em] uppercase">
+            Generi-Bridge // Data Flow Interface
           </div>
           <div class="flex flex-col sm:grid sm:grid-cols-[1fr_auto_1fr] items-center gap-4 mb-5">
             <div class="w-full bg-white/5 border border-white/10 p-4 text-center">
-              <div class="font-mono text-[0.6rem] text-white/50 tracking-widest mb-1">SOURCE</div>
+              <div class="font-mono text-[0.6rem] text-white/50 tracking-widest mb-1 uppercase">Source</div>
               <div class="font-bold text-white text-sm">Legacy DB</div>
               <div class="font-mono text-[0.6rem] text-white/40 mt-1 uppercase">ERP/MES/SQL</div>
             </div>
             <div class="text-[#b85c38] rotate-90 sm:rotate-0"><i data-lucide="arrow-right" class="w-5 h-5"></i></div>
             <div class="w-full bg-[#1a7a78]/20 border border-[#1a7a78]/40 p-4 text-center">
-              <div class="font-mono text-[0.6rem] text-white/50 tracking-widest mb-1">BRIDGE</div>
+              <div class="font-mono text-[0.6rem] text-white/50 tracking-widest mb-1 uppercase">Bridge</div>
               <div class="font-bold text-[#22a09d] text-sm">AI Agent</div>
               <div class="font-mono text-[0.6rem] text-[#1a7a78] mt-1 uppercase">Secure RAG</div>
             </div>
@@ -481,172 +480,109 @@
     </div>
   </section>
 
-  <section id="about" class="py-24 px-6 md:px-12 bg-[#0f2142] relative z-10">
-    <div class="max-w-7xl mx-auto">
-      <p class="font-mono text-xs tracking-[0.2em] text-[#d4724a] uppercase mb-4 uppercase">About Generi</p>
-      <h2 class="text-3xl md:text-4xl lg:text-[2.8rem] font-black text-[#f0ece3] font-serif leading-[1.25] mb-12">
-        진정한 DX는 기술, 현장, 사람의<br />
-        <span class="text-[#22a09d]">완벽한 연결에서 완성됩니다</span>
-      </h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
-        <div>
-          <blockquote class="font-serif text-[1.1rem] md:text-[1.7rem] font-black leading-[1.45] text-[#f0ece3] pl-6 border-l-[3px] border-[#b85c38] mb-8">
-            "현장을 모르는 AI는 반쪽짜리입니다.<br />제너리는 산업 현장의 언어와 AI의 언어를 동시에 말합니다."
-          </blockquote>
-          <p class="text-[0.88rem] md:text-[0.92rem] text-[#f0ece3]/60 leading-[2] font-light mb-10">
-            제너리(Generi)는 <strong class="text-[#f0ece3] font-medium">레거시(Legacy)의 깊은 이해</strong>와 <strong class="text-[#f0ece3] font-medium uppercase">생성형 AI(Generative)의 최신 기술</strong>을 함께 보유한 산업용 DX 솔루션 기업입니다.<br /><br />
-            단순한 IT 컨설팅이 아닙니다. 대형 프로젝트를 통해 쌓아온 <strong class="text-[#f0ece3] font-medium">풍부한 실전 경험</strong>을 바탕으로, 귀사의 레거시 자산을 AI 경쟁력으로 전환해 드립니다.<br /><br />
-            가장 안전한 데이터 연결(Generi-Bridge), 가장 기민한 현장의 연결(Generi-Camp), 가장 지속가능한 인재의 연결(DX Consulting).<br />
-            <strong class="text-[#f0ece3] font-medium uppercase">레거시를 훼손하지 않으면서, 미래로 연결하는 교량</strong>이 되겠습니다.
-          </p>
-        </div>
-
-        <div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-            <div class="bg-white/5 border border-white/5 p-5 relative overflow-hidden">
-              <div class="absolute top-0 left-0 w-[2px] h-full bg-[#22a09d] opacity-50"></div>
-              <i data-lucide="database" class="text-[#22a09d] w-6 h-6 mb-2"></i>
-              <h4 class="font-serif text-[0.92rem] font-bold text-[#f0ece3] mb-1 uppercase">산업 현장 전문성</h4>
-              <p class="text-[0.78rem] text-[#f0ece3]/50 leading-[1.7] font-light">제조·중공업 워크플로우를 깊이 이해하는 팀.</p>
-            </div>
-            <div class="bg-white/5 border border-white/5 p-5 relative overflow-hidden">
-              <div class="absolute top-0 left-0 w-[2px] h-full bg-[#22a09d] opacity-50"></div>
-              <i data-lucide="bot" class="text-[#22a09d] w-6 h-6 mb-2"></i>
-              <h4 class="font-serif text-[0.92rem] font-bold text-[#f0ece3] mb-1 uppercase">최신 AI 기술력</h4>
-              <p class="text-[0.78rem] text-[#f0ece3]/50 leading-[1.7] font-light uppercase">LLM, RAG, LangChain 실전 적용 역량.</p>
-            </div>
-            <div class="bg-white/5 border border-white/5 p-5 relative overflow-hidden">
-              <div class="absolute top-0 left-0 w-[2px] h-full bg-[#22a09d] opacity-50"></div>
-              <i data-lucide="lock" class="text-[#22a09d] w-6 h-6 mb-2"></i>
-              <h4 class="font-serif text-[0.92rem] font-bold text-[#f0ece3] mb-1 uppercase">보안 최우선</h4>
-              <p class="text-[0.78rem] text-[#f0ece3]/50 leading-[1.7] font-light uppercase">사내 폐쇄망 기반 On-premise 보안 구조.</p>
-            </div>
-            <div class="bg-white/5 border border-white/5 p-5 relative overflow-hidden">
-              <div class="absolute top-0 left-0 w-[2px] h-full bg-[#22a09d] opacity-50"></div>
-              <i data-lucide="zap" class="text-[#22a09d] w-6 h-6 mb-2"></i>
-              <h4 class="font-serif text-[0.92rem] font-bold text-[#f0ece3] mb-1 uppercase">비용 효율 극대화</h4>
-              <p class="text-[0.78rem] text-[#f0ece3]/50 leading-[1.7] font-light">기존 시스템 유지로 최소 비용 AI 도입.</p>
-            </div>
-          </div>
-
-          <div class="bg-white/5 border border-white/10 rounded-sm p-6 md:p-8 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-br from-[#1a7a78]/10 to-transparent pointer-events-none"></div>
-            <div class="font-mono text-[0.55rem] md:text-[0.6rem] tracking-[0.18em] text-[#d4724a] uppercase mb-5 flex items-center gap-2 border-b border-[#b85c38]/20 pb-2 uppercase">
-              GENERI // FOUNDING TEAM PROFILE
-            </div>
-            <div class="flex items-center gap-4 mb-4">
-              <div>
-                <div class="font-serif font-bold text-base text-[#f0ece3] tracking-wide uppercase">GENERI</div>
-                <div class="font-mono text-[0.6rem] md:text-[0.62rem] text-[#f0ece3]/45 tracking-[0.1em] uppercase">AI & REALITY SOLUTIONS</div>
-              </div>
-            </div>
-            <div class="font-mono text-[0.65rem] md:text-[0.68rem] text-[#d4724a] tracking-[0.1em] uppercase mb-4 uppercase">Founder & CEO · www.generi.cloud</div>
-            <ul class="flex flex-col gap-2 mt-4">
-              <li class="text-[0.8rem] md:text-[0.84rem] text-[#f0ece3]/60 flex gap-2 items-start"><span class="text-[#22a09d] font-mono shrink-0">→</span>삼성그룹 대형 프로젝트 및 중공업 현장 수행</li>
-              <li class="text-[0.8rem] md:text-[0.84rem] text-[#f0ece3]/60 flex gap-2 items-start"><span class="text-[#22a09d] font-mono shrink-0">→</span>SW 개발 및 레거시 최적화 전문</li>
-              <li class="text-[0.8rem] md:text-[0.84rem] text-[#f0ece3]/60 flex gap-2 items-start"><span class="text-[#22a09d] font-mono shrink-0">→</span>제조 공정 워크플로우 분석 전문가</li>
-            </ul>
-            <div class="flex flex-wrap gap-1.5 mt-5">
-              <span class="bg-white/5 border border-white/10 text-[#f0ece3]/55 text-[0.65rem] md:text-[0.71rem] px-2.5 py-1 rounded-sm font-mono uppercase">PowerBuilder</span>
-              <span class="bg-white/5 border border-white/10 text-[#f0ece3]/55 text-[0.65rem] md:text-[0.71rem] px-2.5 py-1 rounded-sm font-mono uppercase uppercase">Python/AI</span>
-              <span class="bg-white/5 border border-white/10 text-[#f0ece3]/55 text-[0.65rem] md:text-[0.71rem] px-2.5 py-1 rounded-sm font-mono uppercase">삼성그룹</span>
-              <span class="bg-white/5 border border-white/10 text-[#f0ece3]/55 text-[0.65rem] md:text-[0.71rem] px-2.5 py-1 rounded-sm font-mono uppercase uppercase">RAG/LangChain</span>
-            </div>
-          </div>
-        </div>
+  <section id="about" class="py-24 px-6 md:px-12 bg-[#0f2142] relative z-10 text-[#f0ece3]">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <h2 class="text-3xl font-serif font-black mb-8 border-l-4 border-[#b85c38] pl-6 uppercase tracking-wider">About Generi</h2>
+        <p class="text-[#f0ece3]/70 leading-[2] font-light">
+          제너리는 산업 현장의 깊은 이해와 생성형 AI 기술력을 동시에 보유한 실전형 DX 솔루션 기업입니다. 
+          삼성그룹 대형 프로젝트 및 제조/중공업 현장 수행 경험을 바탕으로, 데이터 유출 없는 안전한 AI 환경을 약속합니다.
+        </p>
+      </div>
+      <div class="bg-[#f0ece3] p-10 text-[#0f2142]">
+        <div class="text-xl font-serif font-black mb-4 uppercase">Founding Team Profile</div>
+        <p class="text-sm leading-relaxed text-[#6b7a8d] mb-6">
+          "현장을 모르는 AI는 반쪽입니다. 제너리는 산업 현장의 언어와 데이터의 흐름을 누구보다 깊게 이해합니다."
+        </p>
+        <ul class="text-[0.85rem] flex flex-col gap-3">
+          <li class="flex gap-3 items-center"><span>✓</span><span>삼성그룹 대형 프로젝트 현장 수행</span></li>
+          <li class="flex gap-3 items-center"><span>✓</span><span>제조 공정 워크플로우 분석 전문가</span></li>
+          <li class="flex gap-3 items-center"><span>✓</span><span>레거시 시스템 AI 최적화 전문 팀</span></li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section id="contact" class="py-24 px-6 md:px-12 bg-[#e8e3d8] relative z-10 border-t border-[#0f2142]/10">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-3xl md:text-4xl lg:text-[2.8rem] font-black text-[#0f2142] font-serif leading-[1.25] mb-12">
+      <h2 class="text-3xl md:text-[2.8rem] font-black text-[#0f2142] font-serif leading-[1.25] mb-12">
         비싼 시스템 교체 전에,<br />
         <span class="text-[#b85c38]">무료 진단부터 받아보세요.</span>
       </h2>
-      
-      <div class="grid lg:grid-cols-[1fr_1.2fr] gap-16 items-start">
-        <div>
-          <p class="text-[#6b7a8d] mb-8 leading-relaxed font-light text-[0.9rem] md:text-[0.95rem]">현장 경험 풍부한 전문가가 직접 귀사의 상황을 무료로 진단해 드립니다. 부담 없이 연락주세요.</p>
-          <div class="flex flex-col gap-4 mt-6">
-            <div class="flex items-start gap-4 text-[#6b7a8d] text-[0.85rem] md:text-[0.87rem]">
-              <span class="font-mono text-[0.62rem] tracking-[0.14em] text-[#b85c38] shrink-0 w-11 pt-1 uppercase uppercase">EMAIL</span>
-              <span>sales@generi.cloud</span>
-            </div>
-            <div class="flex items-start gap-4 text-[#6b7a8d] text-[0.85rem] md:text-[0.87rem]">
-              <span class="font-mono text-[0.62rem] tracking-[0.14em] text-[#b85c38] shrink-0 w-11 pt-1 uppercase uppercase">WEB</span>
-              <span>www.generi.cloud</span>
-            </div>
+      <div class="grid lg:grid-cols-[1fr_1.5fr] gap-16">
+        <div class="space-y-6">
+          <p class="text-[#6b7a8d] leading-relaxed">현장 전문가가 직접 방문하여 현재의 데이터 환경을 진단하고 최적의 AI 도입 로드맵을 제안해 드립니다.</p>
+          <div>
+            <div class="text-xs font-mono text-[#b85c38] mb-1 uppercase">Email Address</div>
+            <div class="text-lg font-bold">sales@generi.cloud</div>
+          </div>
+          <div>
+            <div class="text-xs font-mono text-[#b85c38] mb-1 uppercase">Official Web</div>
+            <div class="text-lg font-bold">www.generi.cloud</div>
           </div>
         </div>
 
-        <form id="contact-form" class="flex flex-col gap-4">
-          <input type="hidden" name="access_key" value="여기에_발급받은_키를_넣으세요">
-          <input type="hidden" name="subject" value="[제너리 웹사이트] 새로운 무료 진단 신청이 접수되었습니다.">
+        <form id="contact-form" class="flex flex-col gap-5">
+          <input type="hidden" name="access_key" value="35ac98dd-5213-4034-8bf4-2b2f13de18bf">
+          <input type="hidden" name="subject" value="[제너리 웹 문의] 새로운 무료 진단 신청이 도착했습니다.">
           <input type="hidden" name="from_name" value="GENERI 홈페이지 알림">
-          <input type="hidden" name="replyto" value="sales@generi.cloud">
-          
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="flex flex-col gap-1.5">
-              <label class="font-mono text-[0.6rem] md:text-[0.66rem] tracking-[0.14em] text-[#6b7a8d] uppercase">이름</label>
-              <input type="text" name="user_name" required class="w-full bg-white border border-[#0f2142]/10 p-3 text-[0.85rem] md:text-[0.87rem] text-[#0f2142] focus:outline-none focus:border-[#1a7a78] focus:ring-2 focus:ring-[#1a7a78]/10 rounded-sm transition" placeholder="홍길동" />
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div class="flex flex-col gap-2">
+              <label class="text-xs font-bold text-[#6b7a8d] uppercase">성함</label>
+              <input type="text" name="user_name" placeholder="홍길동" required class="p-4 border border-[#0f2142]/10 outline-none focus:border-[#1a7a78] transition">
             </div>
-            <div class="flex flex-col gap-1.5">
-              <label class="font-mono text-[0.6rem] md:text-[0.66rem] tracking-[0.14em] text-[#6b7a8d] uppercase">회사명</label>
-              <input type="text" name="company_name" required class="w-full bg-white border border-[#0f2142]/10 p-3 text-[0.85rem] md:text-[0.87rem] text-[#0f2142] focus:outline-none focus:border-[#1a7a78] focus:ring-2 focus:ring-[#1a7a78]/10 rounded-sm transition" placeholder="제너리" />
+            <div class="flex flex-col gap-2">
+              <label class="text-xs font-bold text-[#6b7a8d] uppercase">회사명</label>
+              <input type="text" name="company_name" placeholder="(주)제너리" required class="p-4 border border-[#0f2142]/10 outline-none focus:border-[#1a7a78] transition">
             </div>
           </div>
-          <div class="flex flex-col gap-1.5">
-            <label class="font-mono text-[0.6rem] md:text-[0.66rem] tracking-[0.14em] text-[#6b7a8d] uppercase">연락처</label>
-            <input type="tel" name="phone" required class="w-full bg-white border border-[#0f2142]/10 p-3 text-[0.85rem] md:text-[0.87rem] text-[#0f2142] focus:outline-none focus:border-[#1a7a78] focus:ring-2 focus:ring-[#1a7a78]/10 rounded-sm transition" placeholder="010-0000-0000" />
+          <div class="flex flex-col gap-2">
+            <label class="text-xs font-bold text-[#6b7a8d] uppercase">연락처</label>
+            <input type="tel" name="phone" placeholder="010-0000-0000" required class="p-4 border border-[#0f2142]/10 outline-none focus:border-[#1a7a78] transition">
           </div>
-          <div class="flex flex-col gap-1.5">
-            <label class="font-mono text-[0.6rem] md:text-[0.66rem] tracking-[0.14em] text-[#6b7a8d] uppercase">문의 내용</label>
-            <textarea name="message" rows="4" required class="w-full bg-white border border-[#0f2142]/10 p-3 text-[0.85rem] md:text-[0.87rem] text-[#0f2142] focus:outline-none focus:border-[#1a7a78] focus:ring-2 focus:ring-[#1a7a78]/10 rounded-sm transition" placeholder="도입을 고민하시는 시스템이나 궁금한 점을 편하게 적어주세요."></textarea>
+          <div class="flex flex-col gap-2">
+            <label class="text-xs font-bold text-[#6b7a8d] uppercase">문의 및 진단 요청 내용</label>
+            <textarea name="message" rows="5" placeholder="궁금하신 내용을 자유롭게 남겨주세요." required class="p-4 border border-[#0f2142]/10 outline-none focus:border-[#1a7a78] transition"></textarea>
           </div>
-          <button type="submit" class="bg-[#0f2142] text-white font-bold py-4 rounded-sm hover:bg-[#1e3a6a] transition mt-2">무료 진단 신청하기</button>
+          <button type="submit" id="submit-btn" class="bg-[#0f2142] text-white font-bold py-5 hover:bg-[#1e3a6a] transition shadow-lg">무료 진단 신청하기</button>
         </form>
       </div>
     </div>
   </section>
 
-  <footer class="bg-[#0f2142] py-8 border-t border-white/10 text-center text-white/50 text-[0.75rem] md:text-[0.8rem]">
+  <footer class="bg-[#0f2142] py-12 text-center text-white/40 text-xs border-t border-white/5 uppercase tracking-widest">
     <div class="max-w-7xl mx-auto px-6">
       <p>&copy; 2026 Generi. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    // Lucide Icons 초기화
+    // 아이콘 초기화
     lucide.createIcons();
 
-    // 모바일 메뉴 열기/닫기 동작
-    document.getElementById('menu-btn').addEventListener('click', function() {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
+    // 모바일 메뉴 토글
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
     });
 
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-    mobileLinks.forEach(function(link) {
-      link.addEventListener('click', function() {
-        document.getElementById('mobile-menu').classList.add('hidden');
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
       });
     });
 
-    // [수정완료] 이메일 전송 스크립트 (Web3Forms AJAX 연동)
+    // 메일 전송 처리 스크립트
     const form = document.getElementById('contact-form');
+    const btn = document.getElementById('submit-btn');
+
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       
-      // 사용자 필수 키 체크
-      if(form.access_key.value === "여기에_발급받은_키를_넣으세요" || form.access_key.value === "") {
-        alert("알림: HTML 소스 코드에서 Web3Forms Access Key를 먼저 입력해주세요!");
-        return;
-      }
-
-      const btn = form.querySelector('button[type="submit"]');
       const originalText = btn.innerText;
-      btn.innerText = '전송 중... 잠시만 기다려주세요';
+      btn.innerText = "전송 중...";
       btn.disabled = true;
 
       const formData = new FormData(form);
@@ -655,23 +591,19 @@
 
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: json
       })
       .then(async (response) => {
         if (response.status == 200) {
           alert('성공적으로 잘 보냈습니다! 담당자가 확인 후 연락드리겠습니다.');
-          form.reset(); // 입력창 초기화(리셋)
+          form.reset(); // 성공 시 입력칸 리셋
         } else {
-          alert('전송에 실패했습니다. 다시 시도해주세요.');
+          alert('전송 중 오류가 발생했습니다. 다시 시도해주세요.');
         }
       })
       .catch(error => {
-        console.log(error);
-        alert('네트워크 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+        alert('네트워크 오류가 발생했습니다.');
       })
       .finally(() => {
         btn.innerText = originalText;
